@@ -362,3 +362,43 @@ input::placeholder{
   border-radius: 2px;
   transition: 0.4s;
 }
+
+/*--------- Responsive Styles ---------*/
+@media (max-width: 600px) {
+  #home .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  #home .img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  #home h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  #home p {
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .btn-cv {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+}
