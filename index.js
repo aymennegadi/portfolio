@@ -36,3 +36,14 @@ function sendMessage() {
 
   return false;
 }
+
+// index.js
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger-menu");
+  const navLinks = document.getElementById("navLinks");
+
+  hamburger.addEventListener("click", function () {
+    navLinks.classList.toggle("open");
+  });
+});
+
