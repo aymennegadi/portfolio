@@ -129,14 +129,23 @@
       </div>
       <div class="form">
         <h1>Welcome!</h1>
-        <input type="text" id="name" placeholder="Enter your full name" /><br />
-        <input type="email" id="email" placeholder="Enter your Email" /><br />
-        <input type="number" id="tel" placeholder="Enter your phone number" />
-        <br />
-        <div class="btn">
-          <button class="bt1" onclick="sendMessage()">Send</button>
-          <button class="bt2" type="reset">Reset all</button>
-        </div>
+        <form id="contactForm">
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+          /><br />
+          <input type="email" id="email" placeholder="Enter your Email" /><br />
+          <input type="number" id="tel" placeholder="Enter your phone number" />
+          <br />
+          <div class="btn">
+            <button class="bt1" type="button" onclick="sendMessage()">
+              Send
+            </button>
+          </div>
+        </form>
+        <p id="confirmation" style="color: green; display: none;">Message envoyé avec succès ! ✅</p>
+
       </div>
     </section>
 

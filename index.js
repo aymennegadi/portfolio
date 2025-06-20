@@ -6,7 +6,7 @@ function sendMessage() {
   var message =
     "Name: " + user_name + "\nEmail: " + user_email + "\nTel: " + user_tel;
   const bot_id = "7890966434:AAGxUMC6QwHsuJT8a0C6N39rLIC3Pqls2G8";
-  const chat_id = "5587335581"; // Replace with your actual chat_id
+  const chat_id = "5587335581"; 
 
   fetch("https://api.telegram.org/bot" + bot_id + "/sendMessage", {
     method: "POST",
@@ -24,6 +24,11 @@ function sendMessage() {
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("tel").value = "";
+
+      document.getElementById("confirmation").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("confirmation").style.display = "none";
+      }, 5000);
     })
     .catch((error) => {
       console.error("Error sending message", error);
