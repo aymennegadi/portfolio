@@ -1,19 +1,23 @@
-/* Styles de base (votre code original) */
+/* Styles de base */
 * {
     text-decoration: none;
-    box-sizing: border-box; /* Ajouté pour faciliter la responsivité */
+    box-sizing: border-box;
 }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('3334896.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Ajouté pour fixer l'arrière-plan */
+    background-attachment: fixed;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
+/* Navigation */
 nav {
     height: 50px;
     display: flex;
@@ -23,14 +27,15 @@ nav {
     color: white;
     padding: 10px 20px;
     -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px); /* Propriété standard ajoutée */
-    position: fixed; /* Rendre la nav-bar fixe */
-    width: 100%; /* S'étirer sur toute la largeur */
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Assurer que la nav-bar est au-dessus */
+    z-index: 1000;
 }
 
+/* Section Home */
 #home {
     margin-top: -70px;
     height: 100vh;
@@ -40,6 +45,7 @@ nav {
     justify-content: center;
     align-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 100px;
 }
 
 .logo {
@@ -47,11 +53,12 @@ nav {
     font-weight: bold;
     padding-left: 50px;
 }
+
 .logo:hover {
     color: rgb(90, 129, 213);
 }
 
-/* Le hamburger est caché par défaut sur les grands écrans */
+/* Menu Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -59,7 +66,7 @@ nav {
     width: 30px;
     height: 25px;
     cursor: pointer;
-    z-index: 1001; /* Au-dessus des nav-links */
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -70,13 +77,14 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
-/* Animation du hamburger en 'X' */
 .hamburger.open span:nth-child(1) {
     transform: translateY(11px) rotate(45deg);
 }
+
 .hamburger.open span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.open span:nth-child(3) {
     transform: translateY(-11px) rotate(-45deg);
 }
@@ -115,14 +123,9 @@ nav {
     width: 100%;
 }
 
+/* Sections générales */
 section {
     padding: 60px 20px;
-}
-
-#home {
-    text-align: center;
-    /* margin-top: -70px; et height: 100vh; sont dans les styles originaux */
-    padding-top: 100px; /* Ajouté pour décaler le contenu sous la nav-bar fixe */
 }
 
 .hero-text {
@@ -142,6 +145,7 @@ section {
     height: auto;
     position: static;
 }
+
 #img {
     display: block;
     margin: 30px 10px auto;
@@ -164,20 +168,24 @@ section {
     border-bottom-right-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .cls a {
     color: white;
     text-decoration: none;
 }
+
 .cls:hover {
-  background-color: rgb(149, 109, 172);
-}
-.cls a:hover {
-  color: black;
+    background-color: rgb(149, 109, 172);
 }
 
+.cls a:hover {
+    color: black;
+}
+
+/* Section Services */
 #services {
-    height: 100vh;
-    padding: min(50px, 7%);
+    height: auto;
+    padding: 50px 20px;
     text-align: center;
     color: rgb(255, 255, 255);
 }
@@ -186,9 +194,11 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 350px);
     grid-template-rows: repeat(3, 250px);
-    grid-gap: 20px 20px;
+    grid-gap: 20px;
     justify-content: center;
+    margin-bottom: 40px;
 }
+
 .card {
     padding: 2em;
     border: 1px solid rgb(75, 82, 92);
@@ -199,8 +209,14 @@ section {
     position: relative;
 }
 
+/* Section Contact */
 #contact {
-    height: 100vh;
+    height: auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
 .form {
@@ -212,10 +228,10 @@ section {
     width: 450px;
     background-color: transparent;
     backdrop-filter: blur(5px);
-    margin-left: 700px;
-    margin-top: 40px;
+    padding: 20px;
     text-align: center;
 }
+
 .form input {
     margin: 32px;
     height: 40px;
@@ -225,15 +241,18 @@ section {
     border-color: white;
     color: rgb(140, 164, 199);
 }
+
 input::placeholder {
     color: white;
     text-align: center;
 }
+
 .btn {
     display: flex;
     gap: 30px;
     justify-content: center;
 }
+
 .bt1 {
     height: 40px;
     width: 100px;
@@ -247,16 +266,15 @@ input::placeholder {
     color: white;
     height: 450px;
     width: 450px;
-    position: absolute;
-    margin-left: 50px;
-    margin-top: 40px;
     border: 3px solid rgb(124, 125, 179);
     border-top-right-radius: 40px;
     border-bottom-left-radius: 40px;
+    padding: 20px;
 }
+
 .contact-info h3 {
     margin-bottom: clamp(1.5rem, 4vh, 2rem);
-    color: var(--primary-color); /* Note: --primary-color n'est pas défini. Utilisera la couleur par défaut si non défini ailleurs. */
+    color: white;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     text-align: center;
 }
@@ -266,13 +284,14 @@ input::placeholder {
     align-items: center;
     margin-bottom: clamp(1rem, 3vh, 1.5rem);
 }
+
 .info-item i {
-    color: var(--primary-color);
     font-size: clamp(1rem, 2vw, 1.2rem);
     margin-right: clamp(0.7rem, 2vw, 1rem);
     width: clamp(20px, 5vw, 24px);
     margin-left: 20px;
 }
+
 .social-links {
     display: flex;
     gap: clamp(0.7rem, 2vw, 1rem);
@@ -280,6 +299,7 @@ input::placeholder {
     margin-top: clamp(1.5rem, 4vh, 2rem);
     margin-left: 20px;
 }
+
 .social-links a {
     width: clamp(35px, 6vw, 40px);
     height: clamp(35px, 6vw, 40px);
@@ -288,14 +308,16 @@ input::placeholder {
     justify-content: center;
     background-color: rgba(231, 76, 60, 0.1);
     border-radius: 50%;
-    color: var(--primary-color);
-    transition: var(--transition); /* Note: --transition n'est pas défini. */
-}
-.social-links a:hover {
-    background-color: var(--primary-color);
-    color: var(--light-text); /* Note: --light-text n'est pas défini. */
+    color: white;
+    transition: all 0.3s ease;
 }
 
+.social-links a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Section About */
 #about {
     height: 100vh;
 }
@@ -315,15 +337,18 @@ input::placeholder {
     justify-content: center;
     align-items: center;
 }
+
 .about-container img {
     border-radius: 20px;
     margin-left: 15px;
 }
+
 .about-container p {
     color: rgb(162, 168, 197);
     text-align: left;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -332,13 +357,14 @@ footer {
     margin-top: 10px;
 }
 
-/* --- Règles de Responsivité (ajouts avec @media) --- */
+/* ==================== */
+/* Responsive Mobile */
+/* ==================== */
 
-/* Appliquer ces règles pour les écrans de taille moyenne (tablettes) et plus petits */
 @media (max-width: 1024px) {
     .hero-text {
-        margin-left: 0; /* Centrer sur les écrans plus petits */
-        width: 90%; /* Occuper plus de largeur */
+        margin-left: 0;
+        width: 90%;
         max-width: 600px;
     }
 
@@ -348,191 +374,168 @@ footer {
     }
 
     .grid-container {
-        grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Deux colonnes */
-        grid-template-rows: auto; /* Hauteur automatique */
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
+        grid-template-rows: auto;
         gap: 15px;
     }
 
     .contact-info,
     .form {
-        margin-left: auto; /* Supprimer les marges fixes */
-        margin-right: auto;
-        width: 90%; /* Rendre fluide */
-        max-width: 400px;
-    }
-
-    #contact {
-        flex-direction: column; /* Empiler les sections contact et formulaire */
-        align-items: center;
-        height: auto; /* Hauteur automatique */
-        padding-top: 80px; /* Plus d'espace pour la nav-bar fixe */
-        padding-bottom: 40px;
-    }
-    .contact-info {
-        position: static; /* Supprimer le positionnement absolu */
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr; /* Une seule colonne */
-        height: auto;
-        width: 90%;
-        max-width: 500px;
-        padding: 20px;
-        gap: 20px;
-    }
-    .about-container img {
         margin-left: auto;
         margin-right: auto;
-        width: 250px;
-        height: 250px;
-    }
-    .about-container p {
-        text-align: center; /* Centrer le texte pour mobile */
-    }
-    .about-container .icons {
-        justify-content: center; /* Centrer les icônes */
+        width: 90%;
+        max-width: 400px;
     }
 }
 
-/* Règles spécifiques pour les téléphones (petits écrans) */
 @media (max-width: 767px) {
-    /* Navigation pour mobile (Hamburger menu) */
+    /* Navigation Mobile */
     .logo {
-        padding-left: 20px; /* Moins de padding pour le logo */
+        padding-left: 20px;
     }
 
     .hamburger {
-        display: flex; /* Afficher l'icône hamburger */
+        display: flex;
         margin-right: 20px;
     }
 
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* Cache le menu hors écran */
-        flex-direction: column; /* Empile les liens verticalement */
-        background-color: rgba(0, 0, 0, 0.9); /* Fond sombre semi-transparent */
+        right: -100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(10px);
-        width: 70%; /* Largeur du menu */
-        height: 100vh; /* Pleine hauteur de la fenêtre */
-        padding-top: 80px; /* Espace pour la nav-bar */
+        width: 70%;
+        height: 100vh;
+        padding-top: 80px;
         transition: right 0.3s ease-in-out;
         z-index: 999;
-        margin: 0; /* Réinitialise la marge */
-        align-items: center; /* Centre les liens horizontalement */
-        justify-content: flex-start; /* Aligne les liens en haut */
+        margin: 0;
+        align-items: center;
+        justify-content: flex-start;
     }
 
     .nav-links.open {
-        right: 0; /* Fait glisser le menu à l'écran */
+        right: 0;
     }
 
     .nav-links li {
-        margin: 15px 0; /* Espacement vertical des liens */
+        margin: 15px 0;
     }
 
     .nav-links a {
-        font-size: 20px; /* Plus grande taille de police pour les liens mobiles */
+        font-size: 20px;
         padding: 5px 0;
     }
 
-    /* Ajustements généraux pour mobile */
+    /* Home Mobile */
     #home {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: 80px; /* Ajustement pour la nav-bar fixe */
+        padding-top: 80px;
     }
 
     .hero-text {
-        text-align: center; /* Assurer que le texte est centré */
-        width: 95%; /* Plus de fluidité */
+        width: 95%;
         max-width: none;
     }
 
-    .img {
-        flex-direction: column;
-        align-items: center;
-    }
     #img {
-        width: 120px; /* Plus petite image */
+        width: 120px;
         height: 120px;
         margin: 20px auto;
     }
 
     .cls {
-        font-size: 18px; /* Taille de police plus petite pour le bouton CV */
+        font-size: 18px;
         padding: 8px 15px;
     }
 
+    /* Services Mobile */
+    #services {
+        padding: 40px 15px;
+        height: auto;
+    }
+
     .grid-container {
-        grid-template-columns: 1fr; /* Une seule colonne pour les services */
+        grid-template-columns: 1fr;
         width: 95%;
         max-width: 350px;
-        margin: 0 auto;
+        margin: 0 auto 30px;
     }
 
     .card {
         padding: 1.2em;
     }
-    .card img {
-        height: 35px;
-        width: 35px;
+
+    /* Contact Mobile */
+    #contact {
+        flex-direction: column;
+        padding: 30px 15px;
+        height: auto;
+        gap: 30px;
+    }
+
+    .form,
+    .contact-info {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 400px;
     }
 
     .form input {
-        width: calc(100% - 40px); /* Ajuster la largeur des inputs */
+        width: calc(100% - 40px);
         margin: 10px auto;
-        padding: 0 10px;
     }
 
-    .contact-info h3, .form h1 {
-        font-size: 1.4rem;
-    }
-
-    .info-item {
-        flex-direction: column; /* Empiler icône et texte */
-        align-items: center;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .info-item i {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-
-    .social-links {
-        justify-content: center;
+    /* About Mobile */
+    .about-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        gap: 20px;
     }
 
     .about-container img {
+        margin: 0 auto;
         width: 200px;
         height: 200px;
     }
 
+    .about-container p {
+        text-align: center;
+    }
+
+    /* Footer Mobile */
     footer {
-        font-size: 0.75rem; /* Plus petite taille de police pour le pied de page */
+        font-size: 0.75rem;
         padding: 12px;
     }
 }
 
-/* Media query pour les très petits écrans (ex: iPhone SE) */
 @media (max-width: 374px) {
     .nav-links {
         width: 85%;
     }
+    
     .hero-text h2 {
         font-size: 1.5em;
     }
+    
     .hero-text p {
         font-size: 0.9em;
     }
+    
     .cls {
         font-size: 16px;
         padding: 6px 12px;
     }
+    
     .form input {
         width: calc(100% - 20px);
     }
